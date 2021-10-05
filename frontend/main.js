@@ -35,7 +35,8 @@ fetch(api_url,
 })
 .then(function(res){return res.json(); })
 .then(function(data){
-	result_text.innerHTML = "Predicted Age is: " + JSON.stringify(data["predictions"][0]["score"]) + " years";
+	console.log(typeof data);
+	console.log("Predicted Age is: " + JSON.stringify(data["predictions"][0]["score"]) + " years");
 })
 
 }
